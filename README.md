@@ -1,58 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Lista de Tareas (To Do List)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplicación web full-stack para gestión de tareas personales.
+Proyecto #1 del portafolio profesional de Juliana Rojas Zabala.
 
-## About Laravel
+## Stack tecnológico
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Backend:** Laravel 13 (PHP 8.3)
+- **Base de datos:** MySQL 8.4 (via Laragon)
+- **Frontend:** (próximamente React 18)
+- **Entorno local:** Laragon v8.6.1
+- **Control de versiones:** Git + GitHub
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Estado del proyecto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+🚧 En desarrollo — Fase 1: Setup y configuración
 
-## Learning Laravel
+## Requisitos para correr localmente
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Laragon v8.6 o superior
+- PHP 8.3+
+- Composer 2.x
+- MySQL 8.4+
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Instalación
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+1. Clonar el repositorio
+   git clone https://github.com/juliana3001/todo-list.git
 
-## Agentic Development
+2. Entrar a la carpeta
+   cd todo-list
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+3. Instalar dependencias
+   composer install
 
-```bash
-composer require laravel/boost --dev
+4. Copiar el archivo de entorno
+   cp .env.example .env
 
-php artisan boost:install
-```
+5. Generar la clave de la aplicación
+   php artisan key:generate
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+6. Configurar la base de datos en .env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=todo_list
+   DB_USERNAME=root
+   DB_PASSWORD=
 
-## Contributing
+7. Crear la base de datos todo_list en MySQL
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+8. Correr las migraciones
+   php artisan migrate
 
-## Code of Conduct
+9. Iniciar el servidor
+   php artisan serve
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+10. Abrir en el navegador
+    http://127.0.0.1:8000
 
-## Security Vulnerabilities
+## Estructura del proyecto
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    app/
+    ├── Http/Controllers/    → Controladores
+    ├── Models/              → Modelos Eloquent
+    database/
+    ├── migrations/          → Migraciones de BD
+    routes/
+    ├── web.php              → Rutas web
 
-## License
+## Decisiones técnicas
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### ¿Por qué Laragon en vez de XAMPP?
+XAMPP estaba instalado pero PHP no estaba configurado en el PATH del sistema.
+Laragon maneja su propio entorno de forma aislada, evitando conflictos con
+otras instalaciones. Además incluye PHP 8.3, Composer, Git y MySQL listos
+para usar sin configuración adicional.
+
+### ¿Por qué MySQL en vez de PostgreSQL?
+Laragon Full incluye MySQL por defecto. Para este primer proyecto la diferencia
+es mínima — Eloquent ORM funciona igual con ambos. PostgreSQL se usará
+en proyectos posteriores (Proyecto #5: Acortador de URLs).
+
+## Progreso por sesión
+
+### Sesión 1 — 04/05/2026
+- Instalación de Laragon v8.6.1
+- Creación del proyecto Laravel 13
+- Conexión a MySQL con migraciones base
+- Configuración de repositorio GitHub
+- Ramas main y develop configuradas
+
+## Próximos pasos
+
+- [ ] Migración tabla tasks
+- [ ] Modelo Task con Eloquent
+- [ ] Controlador CRUD de tareas
+- [ ] Rutas web para tareas
+- [ ] Vistas Blade básicas
+
+## Autor
+
+Juliana Rojas Zabala
+GitHub: github.com/juliana3001
