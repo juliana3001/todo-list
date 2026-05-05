@@ -45,23 +45,41 @@
 
 ---
 
-## Plantilla para próximas sesiones
+---
 
-## Sesión N — DD/MM/YYYY
-**Horario:** HH:MM – HH:MM (X horas)
-**Estado:** Completada / En progreso
+## Sesión 2 — 05/05/2026
+**Horario:** 00:00 – 02:11 (2 horas 11 minutos)
+**Estado:** Completada
 
 ### Qué se hizo
--
-
-### Obstáculos encontrados
--
+- Creación de rama feature/task-crud con Git Flow profesional
+- Migración de tabla `tasks` con campos title, description, completed, timestamps
+- Modelo Task con Eloquent y $fillable y $casts configurados
+- Controlador TaskController con CRUD completo (index, create, store, edit, update, destroy)
+- Función toggle para marcar tareas como completadas/pendientes
+- Rutas resourceful en web.php con ruta extra para toggle
+- Vistas Blade: layouts/app, tasks/index, tasks/create, tasks/edit
+- Diseño mejorado con gradiente morado, barra de progreso y cards con bordes de color
+- Merge de feature/task-crud → develop → main
 
 ### Commits realizados
--
+- `3aafade` feat: add task CRUD with views and toggle completion
+- `9cfd9b8` feat: improve UI design with progress bar and gradients
 
 ### Aprendizajes
--
+- Migraciones Laravel: crear tablas con Blueprint y tipos de datos
+- Eloquent ORM: $fillable, $casts, consultas con orderBy y get
+- Controlador MVC: separación de lógica en métodos específicos
+- Rutas resourceful: Route::resource genera 7 rutas automáticamente
+- Vistas Blade: @extends, @section, @yield, @foreach, @if, @error
+- Git Flow completo: feature branch → develop → main con merge
+- Validaciones Laravel: required, min, max, nullable
 
-### Próxima sesión
-- [ ]
+### Obstáculos encontrados
+- Cambios sin commitear al intentar cambiar de rama → Solución: siempre commitear antes de checkout
+
+### Próxima sesión — Proyecto 2: CRUD + API REST
+- [ ] Instalar y configurar Laravel Sanctum para autenticación API
+- [ ] Crear endpoints JSON para tareas (GET, POST, PUT, DELETE)
+- [ ] Probar API con Postman o Thunder Client
+- [ ] Documentar endpoints con comentarios Swagger
