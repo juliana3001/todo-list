@@ -13,7 +13,8 @@ Proyecto #1 del portafolio profesional de Juliana Rojas Zabala.
 
 ## Estado del proyecto
 
-🚧 En desarrollo — Fase 1: Setup y configuración
+✅ Proyecto 1 completado — To Do List con Laravel 13, MySQL y Blade
+🚧 Proyecto 2 en planificación — CRUD + API REST
 
 ## Requisitos para correr localmente
 
@@ -90,13 +91,26 @@ en proyectos posteriores (Proyecto #5: Acortador de URLs).
 - Configuración de repositorio GitHub
 - Ramas main y develop configuradas
 
+### Sesión 2 — 05/05/2026
+- Migración, modelo y controlador de tareas
+- CRUD completo con vistas Blade
+- Función toggle para completar tareas
+- Diseño mejorado con barra de progreso
+- Merge feature/task-crud → develop → main
+
 ## Próximos pasos
 
-- [ ] Migración tabla tasks
-- [ ] Modelo Task con Eloquent
-- [ ] Controlador CRUD de tareas
-- [ ] Rutas web para tareas
-- [ ] Vistas Blade básicas
+- [x] Migración tabla tasks
+- [x] Modelo Task con Eloquent
+- [x] Controlador CRUD de tareas
+- [x] Rutas web para tareas
+- [x] Vistas Blade básicas
+
+## Proyecto 2 — CRUD + API REST
+- [ ] Instalar Laravel Sanctum
+- [ ] Crear endpoints JSON
+- [ ] Probar con Postman
+- [ ] Documentar con Swagger
 
 ## Autor
 
