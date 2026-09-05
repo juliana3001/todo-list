@@ -13,8 +13,8 @@ Proyecto #1 del portafolio profesional de Juliana Rojas Zabala.
 
 ## Estado del proyecto
 
-✅ Proyecto 1 completado — To Do List con Laravel 13, MySQL y Blade
-🚧 Proyecto 2 en planificación — CRUD + API REST
+ Proyecto 1 completado — To Do List con Laravel 13, MySQL y Blade
+ Proyecto 2 en planificación — CRUD + API REST
 
 ## Requisitos para correr localmente
 
